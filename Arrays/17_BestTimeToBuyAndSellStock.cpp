@@ -1,9 +1,15 @@
-int maxProfit(vector<int>& prices) {
-        int mx=0,mxprofit=0;
-        for(int i=prices.size()-1;i>=0;i--)
-        {
-            mx=max(mx,prices[i]);
-            mxprofit=max(mxprofit,abs(mx-prices[i]));
-        }
-        return mxprofit;
+#include<bits/stdc++.h>  
+using namespace std; 
+long long ncr(int n, int r)
+{
+    long long ans=1;
+    for(int i=1;i<=r;i++)
+    {
+        ans=ans*((n+1)-r)/r;
     }
+    return ans;
+}
+int main() 
+{
+    cout<<ncr(4,3);
+}
